@@ -5,7 +5,7 @@ By Savion, Zong You, Dana, Taylon and Kyran
 
 
 ## Features 💡
-\- **Ordering & Checkout** features developed by Savion <br>
+**Ordering & Checkout** features developed by Savion
 
 Key features implemented:
 
@@ -17,7 +17,8 @@ Key features implemented:
 - Payment processing
 - Payment process status display
 
-\- **Vendor Management** features developed by Zong You <br>
+  
+**Vendor Management** features developed by Zong You
 
 Key features implemented:
 
@@ -27,13 +28,14 @@ Key features implemented:
 - Rental Renewal
 - Stall Weekly Dashboard
 - Feedback & Complaint Management
+
   
-\- **Sales & Analytics** features developed by Dana <br>
+**Sales & Analytics** features developed by Dana
 
 
-\- **User Account Management** features developed by Taylon <br>
+**User Account Management** features developed by Taylon
 
 
-\- **Ordering History** features developed by Kyran <br>
+**Ordering History** features developed by Kyran
 
 
