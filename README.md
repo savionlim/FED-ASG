@@ -8,14 +8,13 @@ By Savion, Zong You, Dana, Taylon and Kyran
 - **Ordering & Checkout** features developed by Savion
 
 Key features implemented:
-```\-Adding items to cart
+\-Adding items to cart
 \-Cart management
 \-Multi-vendor order handling
 \-Extra Charges 
 \-Checkout process 
 \-Payment processing 
 \-Payment process status display
-```
 
 - **Vendor Management** features developed by Zong You
 
