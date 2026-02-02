@@ -7,7 +7,7 @@
 
 .navbar {
     height: 60px;
-    background: #f2f2f2;
+    background: #ffffff;
     display: flex;
     align-items: center;
     padding: 0 20px;
@@ -17,14 +17,14 @@
 .logo {
     width: 30px;
     height: 30px;
-    background: #ccc;
+    background: #ffffff;
     border-radius: 4px;
 }
 
 .home-button {
     padding: 6px 12px;
     border: none;
-    background: #7f6565;
+    background: #ffffff;
     cursor: pointer;
     border-radius: 10px;
 }
@@ -32,7 +32,7 @@
 .Normal-login {
     padding: 6px 12px;
     border: none;
-    background: #7f6565;
+    background: #ffffff;
     cursor: pointer;
     border-radius: 10px;
 }
@@ -40,7 +40,7 @@
 .vendor-login {
     padding: 6px 12px;
     border: none;
-    background: #7f6565;
+    background: #ffffff;
     cursor: pointer;
     border-radius: 10px;
 }
@@ -48,10 +48,19 @@
 .Order-history {
     padding: 6px 12px;
     border: none;
-    background: #7f6565;
+    background: #ffffff;
     cursor: pointer;
     border-radius: 10px;
 }
+
+.Cart {
+    padding: 6px 12px;
+    border: none;
+    background: #ffffff;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
 
 .nav-icons span {
     display: inline-block;
@@ -67,8 +76,9 @@
 .hero {
     background: red;
     padding: 30px 20px 80px;
+    height: 300px;
     position: relative;
-}
+}/*Image */
 
 .hero h1 {
     font-size: 24px;
@@ -87,7 +97,11 @@
     background: #d1d1d1;
     width: 220px;
     padding: 15px;
-    margin-top: 20px;
+    height: 260px;
+
+    position: absolute;
+    top: 150px;
+    left: 100px;
 }
 
 
