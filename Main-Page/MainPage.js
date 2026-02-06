@@ -1,12 +1,22 @@
 // Navigate to hawker centre details page
 function goToHawkerCentre(hawkerId) {
-    // Redirect to hawker details page with the selected hawker centre
-    window.location.href = '../Order-Page/Order-SelectStall.html?centre=' + hawkerId;
+    const hawkerPages = {
+        'maxwell': 'Maxwell-SelectStall.html',
+        'Lau-Pa-Sat': 'LauPaSat-SelectStall.html',
+        'Chinatown Complex': 'ChinatownComplex-SelectStall.html',
+        'Tekka Centre': 'TekkaCentre-SelectStall.html',
+        'Old Airport Road': 'OldAirportRoad-SelectStall.html',
+        'Tiong Bahru': 'TiongBahru-SelectStall.html',
+    };
+    const pageFile = hawkerPages[hawkerId];
+    if (pageFile) {
+        window.location.href = '../Ordering & CheckOut/SelectHawkerCentrePage/' + pageFile;
+    }
 }
 
 // Home button - go back to main page
 function goHome() {
-    window.location.href = 'index.html';
+    window.location.href = 'MainPage.html';
 }
 
 // Login button functionality
@@ -32,7 +42,25 @@ function showOrderHistory() {
 
 // Cart button functionality
 function showCart() {
-    alert('Cart feature coming soon!');
-    // Later you can replace this with:
-    // window.location.href = 'cart.html';
+    window.location.href = '../Ordering & Checkout/Cart/cart.html';
+}
+
+// Load cart count when page loads
+document.addEventListener('DOMContentLoaded', function() {
+    updateCartCount();
+});
+
+function updateCartCount() {
+    const cart = JSON.parse(localStorage.getItem('hawkerCart')) || [];
+    const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+    
+    // Update the Cart button text to show count
+    const cartButton = document.querySelector('.Cart');
+    if (cartButton) {
+        if (totalItems > 0) {
+            cartButton.textContent = `Cart (${totalItems})`;
+        } else {
+            cartButton.textContent = 'Cart';
+        }
+    }
 }

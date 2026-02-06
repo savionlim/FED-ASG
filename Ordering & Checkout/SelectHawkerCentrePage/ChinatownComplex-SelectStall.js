@@ -1,5 +1,5 @@
 function goToMenu(stallId) {
-    window.location.href = 'menu.html?stall=' + stallId;
+    window.location.href = '../FoodItem Page/TianTianChickenRice.html?stall=' + stallId;
 }
 
 // Filter stalls by category

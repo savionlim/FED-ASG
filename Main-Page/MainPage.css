@@ -279,3 +279,17 @@
         padding-right: 20px;
     }
 }
+
+.Cart.has-items {
+    background-color: #ff6b6b;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
