@@ -39,11 +39,15 @@ function showOrderHistory() {
     // Later you can replace this with:
     // window.location.href = 'order-history.html';
 }
-
+// Feedback button functionality
+function feedback() {
+    window.location.href = 'AboutUs.html';
+}
 // Cart button functionality
 function showCart() {
     window.location.href = '../Ordering & Checkout/Cart/cart.html';
 }
+
 
 // Load cart count when page loads
 document.addEventListener('DOMContentLoaded', function() {
