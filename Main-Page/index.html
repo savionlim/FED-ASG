@@ -10,11 +10,11 @@
 <body>
     <header class="navbar">
         <div class="Logo">
-            <button class="home-button"> Hawker Hub </button>   
-            <button class="Normal-login"> Login </button>
-            <button class="vendor-login"> Vendor-login </button> 
-            <button class="Order-history"> Order History </button>
-            <button class="Cart"> Cart </button>
+            <button class="home-button" onclick="goHome()"> Hawker Hub </button>   
+            <button class="Normal-login" onclick="showLogin()"> Login </button>
+            <button class="vendor-login" onclick="showVendorLogin()"> Vendor-login </button> 
+            <button class="Order-history" onclick="showOrderHistory()"> Order History </button>
+            <button class="Cart" onclick="showCart()"> Cart </button>
         </div>
     </header>
 
@@ -95,10 +95,6 @@
             </div>
         </div>
     </section>
-
-
-
-        
         
     </main>
 
@@ -121,5 +117,7 @@
         <p>HawkerHub 2026</p>
         <p>Terms and services</p>
     </footer>
+
+    <script src="MainPage.js"></script>
 </body>
 </html>
