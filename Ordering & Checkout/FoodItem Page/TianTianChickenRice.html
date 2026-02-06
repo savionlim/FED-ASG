@@ -11,11 +11,12 @@
     <!-- Navigation Bar -->
     <header class="navbar">
         <div class="Logo">
-            <button class="home-button" onclick="window.location.href='Main-Page/MainPage.html'">Hawker Hub</button>   
+            <button class="home-button" onclick="window.location.href='../../Main-Page/MainPage.html'">Hawker Hub</button>   
             <button class="Normal-login">Login</button>
             <button class="vendor-login">Vendor Login</button> 
             <button class="Order-history">Order History</button>
-            <button class="Cart" onclick="viewCart()">Cart (<span id="cart-count">0</span>)</button>
+            <button class="Cart" onclick="showCart()"> Cart (<span id="cart-count">0</span>) </button>
+            <button class="Feedback"> Feedback </button>
         </div>
     </header>
 
@@ -40,29 +41,29 @@
             
             <!-- Steamed Chicken Rice (S) -->
             <div class="menu-item">
-                <div class="menu-item-image"></div>
-                <img src="images/SteamChickenRice.jpg" alt="Steamed Cheicken Rice (S)" class="menu-item-image">
-                <div class="menu-item-info">
-                    <h3>Steamed Chicken Rice (S)</h3>
-                    <p class="menu-item-description">Tender steamed chicken served with fragrant rice</p>
-                    <p class="menu-item-price">$3.50</p>
-                    <div class="add-to-cart-section">
-                        <div class="quantity-selector">
-                            <button class="quantity-btn" onclick="decreaseQuantity('tt-001')">-</button>
-                            <span class="quantity-display" id="qty-tt-001">1</span>
-                            <button class="quantity-btn" onclick="increaseQuantity('tt-001')">+</button>
-                        </div>
-                        <button class="add-to-cart-btn" onclick="addToCart('tt-001', 'Steamed Chicken Rice (S)', 3.50)">
+                <div class="menu-item-image">
+                    <img src="images/TianTian/SteamChickenRice.jpg" alt="Steamed Cheicken Rice (S)" class="menu-item-image">
+                    <div class="menu-item-info">
+                        <h3>Steamed Chicken Rice (S)</h3>
+                        <p class="menu-item-description">Tender steamed chicken served with fragrant rice</p>
+                        <p class="menu-item-price">$3.50</p>
+                        <div class="add-to-cart-section">
+                            <div class="quantity-selector">
+                                <button class="quantity-btn" onclick="decreaseQuantity('tt-001')">-</button>
+                                <span class="quantity-display" id="qty-tt-001">1</span>
+                                <button class="quantity-btn" onclick="increaseQuantity('tt-001')">+</button>
+                            </div>
+                            <button class="add-to-cart-btn" onclick="addToCart('tt-001', 'Steamed Chicken Rice (S)', 3.50)">
                             🛒 Add to Cart
-                        </button>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- Steamed Chicken Rice (M) -->
             <div class="menu-item">
-                <div class="menu-item-image"></div>
-                <img src="images/SteamChickenRice.jpg" alt="Steamed Cheicken Rice (M)" class="menu-item-image">
+                <img src="images/TianTian/SteamChickenRice.jpg" alt="Steamed Cheicken Rice (M)" class="menu-item-image">
                 <div class="menu-item-info">
                     <h3>Steamed Chicken Rice (M)</h3>
                     <p class="menu-item-description">Tender steamed chicken served with fragrant rice</p>
@@ -82,8 +83,7 @@
 
             <!-- Steamed Chicken Rice (L) -->
             <div class="menu-item">
-                <div class="menu-item-image"></div>
-                <img src="images/SteamChickenRice.jpg" alt="Steamed Cheicken Rice (L)" class="menu-item-image">
+                <img src="images/TianTian/SteamChickenRice.jpg" alt="Steamed Cheicken Rice (L)" class="menu-item-image">
                 <div class="menu-item-info">
                     <h3>Steamed Chicken Rice (L)</h3>
                     <p class="menu-item-description">Tender steamed chicken served with fragrant rice</p>
@@ -103,7 +103,7 @@
 
             <!-- Roasted Chicken Rice (S) -->
             <div class="menu-item">
-                <div class="menu-item-image"></div>
+                <img src="images/TianTian/Roasted Chicken Rice.jpg" alt="Roasted Chicken Rice (S)" class="menu-item-image">
                 <div class="menu-item-info">
                     <h3>Roasted Chicken Rice (S)</h3>
                     <p class="menu-item-description">Crispy roasted chicken with flavorful rice</p>
@@ -123,7 +123,7 @@
 
             <!-- Roasted Chicken Rice (M) -->
             <div class="menu-item">
-                <div class="menu-item-image"></div>
+                <img src="images/TianTian/Roasted Chicken Rice.jpg" alt="Roasted Chicken Rice (M)" class="menu-item-image">
                 <div class="menu-item-info">
                     <h3>Roasted Chicken Rice (M)</h3>
                     <p class="menu-item-description">Crispy roasted chicken with flavorful rice</p>
@@ -143,7 +143,7 @@
 
             <!-- Roasted Chicken Rice (L) -->
             <div class="menu-item">
-                <div class="menu-item-image"></div>
+                <img src="images/TianTian/Roasted Chicken Rice.jpg" alt="Roasted Chicken Rice (L)" class="menu-item-image">
                 <div class="menu-item-info">
                     <h3>Roasted Chicken Rice (L)</h3>
                     <p class="menu-item-description">Crispy roasted chicken with flavorful rice</p>
@@ -163,7 +163,7 @@
 
             <!-- Lemon Chicken Rice (S) -->
             <div class="menu-item">
-                <div class="menu-item-image"></div>
+                <img src="images/TianTian/lemon chicken rice.jpg" alt="Roasted Chicken Rice (S)" class="menu-item-image">
                 <div class="menu-item-info">
                     <h3>Lemon Chicken Rice (S)</h3>
                     <p class="menu-item-description">Zesty lemon chicken with fragrant rice</p>
@@ -183,7 +183,7 @@
 
             <!-- Lemon Chicken Rice (M) -->
             <div class="menu-item">
-                <div class="menu-item-image"></div>
+                <img src="images/TianTian/lemon chicken rice.jpg" alt="Lemon Chicken Rice (M)" class="menu-item-image">
                 <div class="menu-item-info">
                     <h3>Lemon Chicken Rice (M)</h3>
                     <p class="menu-item-description">Zesty lemon chicken with fragrant rice</p>
@@ -203,7 +203,7 @@
 
             <!-- Lemon Chicken Rice (L) -->
             <div class="menu-item">
-                <div class="menu-item-image"></div>
+                <img src="images/TianTian/lemon chicken rice.jpg" alt="Lemon Chicken Rice (L)" class="menu-item-image">
                 <div class="menu-item-info">
                     <h3>Lemon Chicken Rice (L)</h3>
                     <p class="menu-item-description">Zesty lemon chicken with fragrant rice</p>
@@ -223,7 +223,7 @@
 
             <!-- Egg (Add-on) -->
             <div class="menu-item">
-                <div class="menu-item-image"></div>
+                <img src="images/TianTian/Egg(Add Ons).jpg" alt="Egg (Add-On)" class="menu-item-image">
                 <div class="menu-item-info">
                     <h3>Egg (Add-on)</h3>
                     <p class="menu-item-description">Additional egg</p>
@@ -243,7 +243,7 @@
 
             <!-- Rice (Add-on) -->
             <div class="menu-item">
-                <div class="menu-item-image"></div>
+                <img src="images/TianTian/Rice (Add-On).jpg" alt="Rice (Add-On)" class="menu-item-image">
                 <div class="menu-item-info">
                     <h3>Rice (Add-on)</h3>
                     <p class="menu-item-description">Extra portion of rice</p>
@@ -263,7 +263,7 @@
 
             <!-- Soup (Add-on) -->
             <div class="menu-item">
-                <div class="menu-item-image"></div>
+                <img src="images/TianTian/soup (Add-on).jpg" alt="Rice (Add-On)" class="menu-item-image">
                 <div class="menu-item-info">
                     <h3>Soup (Add-on)</h3>
                     <p class="menu-item-description">Bowl of soup</p>

@@ -45,7 +45,7 @@ function feedback() {
     
 }
 // Cart button functionality
-function showCart() {
+function viewCart() {
     window.location.href = '../Ordering & Checkout/Cart/cart.html';
 }
 

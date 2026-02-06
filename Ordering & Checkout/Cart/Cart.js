@@ -115,7 +115,7 @@ function updateOrderSummary() {
         subtotal += item.price * item.quantity;
     });
     
-    const deliveryFee = 0.00;
+    const deliveryFee = 5.00;
     const serviceFee = subtotal * 0.05; // 5% service fee
     const total = subtotal + deliveryFee + serviceFee;
     

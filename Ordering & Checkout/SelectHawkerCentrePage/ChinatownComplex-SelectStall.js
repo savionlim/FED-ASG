@@ -43,3 +43,27 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    updateCartCount();
+});
+
+function updateCartCount() {
+    const cart = JSON.parse(localStorage.getItem('hawkerCart')) || [];
+    const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+    
+    // Update the Cart button text to show count
+    const cartButton = document.querySelector('.Cart');
+    if (cartButton) {
+        if (totalItems > 0) {
+            cartButton.textContent = `Cart (${totalItems})`;
+        } else {
+            cartButton.textContent = 'Cart';
+        }
+    }
+}
+
+// Show cart page
+function viewCart() {
+    window.location.href = '../Cart/cart.html';
+}

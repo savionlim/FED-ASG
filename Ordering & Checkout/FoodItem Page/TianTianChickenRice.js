@@ -98,5 +98,9 @@ function viewCart() {
 function goBack() {
     const urlParams = new URLSearchParams(window.location.search);
     const centreName = urlParams.get('centre');
-    window.location.href = `../Order-Page/Order-SelectStall.html?centre=${centreName}`;
+    window.location.href = '../SelectHawkerCentrePage/Maxwell-SelectStall.html?centre=' + encodeURIComponent(centreName);
+}
+// Show cart page
+function showCart() {
+    window.location.href = '../Cart/cart.html';
 }
