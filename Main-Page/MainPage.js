@@ -41,7 +41,7 @@ function showOrderHistory() {
 }
 // Feedback button functionality
 function feedback() {
-    window.location.href = 'AboutUs.html';
+    window.location.href = '../Feedback/feedback.html';
     
 }
 // Cart button functionality
