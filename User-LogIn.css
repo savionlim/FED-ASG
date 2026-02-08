@@ -16,8 +16,6 @@ input::placeholder {
 input:focus::placeholder {
     color: transparent;
 }
-button:hover {
-}
 .LogIn-background {
     display:flex;
     flex-direction: column;
@@ -133,6 +131,9 @@ button:hover {
     border: solid 2px;
     border-color: #737373;
 }
+.Next-button:active {
+    filter: brightness(0.8);
+}
 .Next-button-text {
     width:55px;
     height:29px;
@@ -230,7 +231,6 @@ button:hover {
     width:308px;
     border-radius: 50px;
     border: transparent;
-    background-color:#D9D9D9;
 }
 .Guest-Continue-text {
     height:30px;
@@ -266,7 +266,6 @@ button:hover {
     width:308px;
     border-radius: 50px;
     border: transparent;
-    background-color:#D9D9D9;
 }
 .Account-Create-text {
     height:30px;
