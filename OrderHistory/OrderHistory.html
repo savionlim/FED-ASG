@@ -1,46 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Order History</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="orderhistory.css">
+  <link rel="stylesheet" href="orderhistory.css" />
 </head>
-
 <body>
 
 <header class="navbar">
   <h1>Order History</h1>
-  <a href="../Main-Page/MainPage.html" class="back-btn">← Back to Main Page</a>
+  <a href="MainPage.html" class="back-btn">← Back to Main Page</a>
 </header>
 
 <section class="controls">
   <label>
-    Filter by Hawker:
+    Hawker:
     <select id="hawkerFilter">
       <option value="all">All</option>
       <option value="Maxwell Food Centre">Maxwell Food Centre</option>
       <option value="Lau Pa Sat">Lau Pa Sat</option>
       <option value="Chinatown Complex">Chinatown Complex</option>
+      <option value="Tekka Centre">Tekka Centre</option>
+      <option value="Old Airport Road">Old Airport Road</option>
+      <option value="Tiong Bahru Market">Tiong Bahru Market</option>
+    </select>
+  </label>
+
+  <label>
+    Status:
+    <select id="statusFilter">
+      <option value="all">All</option>
+      <option value="Completed">Completed</option>
+      <option value="Preparing">Preparing</option>
+    </select>
+  </label>
+
+  <label>
+    Sort:
+    <select id="sortFilter">
+      <option value="new">Newest</option>
+      <option value="old">Oldest</option>
     </select>
   </label>
 
   <button id="clearOrders" class="clear-btn">Clear Order History</button>
 </section>
 
-<section id="orderHistoryContainer" class="order-grid"></section>
+<section id="orderHistoryContainer" class="orders"></section>
 
-<!-- Modal -->
-<div id="orderModal" class="modal hidden">
-  <div class="modal-content">
-    <span id="closeModal">&times;</span>
-    <h2>Order Details</h2>
-    <div id="modalBody"></div>
-  </div>
-</div>
-
-<script src="OrderHistory.js"></script>
+<script src="orderhistory.js"></script>
 </body>
 </html>
-
-
