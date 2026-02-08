@@ -35,9 +35,18 @@ function showVendorLogin() {
 function showOrderHistory() {
     window.location.href = "../OrderHistory/OrderHistory.html";
 }
- 
-    // Later you can replace this with:
-    // window.location.href = 'order-history.html';
+
+// Simulated cart (only for demo)
+function viewCart() {
+    const cart = [
+        { name: "Chicken Rice", price: 6.5 },
+        { name: "Extra Rice", price: 1.0 }
+    ];
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+    alert("Cart loaded with sample items.");
+}
+
 
 // Feedback button functionality
 function feedback() {
