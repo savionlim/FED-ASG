@@ -6,49 +6,49 @@
   <title>Order History</title>
   <link rel="stylesheet" href="orderhistory.css" />
 </head>
+
 <body>
+  <header class="navbar">
+    <h1>Order History</h1>
+    <button class="back-btn" onclick="goBack()">← Back to Main Page</button>
+  </header>
 
-<header class="navbar">
-  <h1>Order History</h1>
-  <button class="back-btn" onclick="goBack()">← Back to Main Page</button>
-</header>
+  <section class="controls">
+    <label>
+      Hawker Centre:
+      <select id="hawkerFilter">
+        <option value="all">All</option>
+        <option value="Maxwell Food Centre">Maxwell Food Centre</option>
+        <option value="Lau Pa Sat">Lau Pa Sat</option>
+        <option value="Chinatown Complex">Chinatown Complex</option>
+        <option value="Tekka Centre">Tekka Centre</option>
+        <option value="Old Airport Road">Old Airport Road</option>
+        <option value="Tiong Bahru Market">Tiong Bahru Market</option>
+      </select>
+    </label>
 
-<section class="controls">
-  <label>
-    Hawker:
-    <select id="hawkerFilter">
-      <option value="all">All</option>
-      <option value="Maxwell Food Centre">Maxwell Food Centre</option>
-      <option value="Lau Pa Sat">Lau Pa Sat</option>
-      <option value="Chinatown Complex">Chinatown Complex</option>
-      <option value="Tekka Centre">Tekka Centre</option>
-      <option value="Old Airport Road">Old Airport Road</option>
-      <option value="Tiong Bahru Market">Tiong Bahru Market</option>
-    </select>
-  </label>
+    <label>
+      Status:
+      <select id="statusFilter">
+        <option value="all">All</option>
+        <option value="Completed">Completed</option>
+        <option value="Preparing">Preparing</option>
+      </select>
+    </label>
 
-  <label>
-    Status:
-    <select id="statusFilter">
-      <option value="all">All</option>
-      <option value="Completed">Completed</option>
-      <option value="Preparing">Preparing</option>
-    </select>
-  </label>
+    <label>
+      Sort by:
+      <select id="sortFilter">
+        <option value="new">Newest</option>
+        <option value="old">Oldest</option>
+      </select>
+    </label>
 
-  <label>
-    Sort:
-    <select id="sortFilter">
-      <option value="new">Newest</option>
-      <option value="old">Oldest</option>
-    </select>
-  </label>
+    <button id="clearOrders" class="clear-btn">Clear Order History</button>
+  </section>
 
-  <button id="clearOrders" class="clear-btn">Clear Order History</button>
-</section>
+  <section id="orderHistoryContainer" class="orders"></section>
 
-<section id="orderHistoryContainer" class="orders"></section>
-
-<script src="orderhistory.js"></script>
+  <script src="OrderHistory.js"></script>
 </body>
 </html>
