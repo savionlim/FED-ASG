@@ -1,3 +1,7 @@
+function goBack() {
+  window.location.href = "../MainPage.html";
+}
+
 const ordersData = [
   {
     id: "ORD-1001",
@@ -55,9 +59,13 @@ const ordersData = [
   }
 ];
 
-// duplicate to reach 15
+// duplicate until 15 orders
 while (ordersData.length < 15) {
-  ordersData.push({ ...ordersData[ordersData.length % 6], id: "ORD-" + (1000 + ordersData.length + 1) });
+  const base = ordersData[ordersData.length % 6];
+  ordersData.push({
+    ...base,
+    id: "ORD-" + (1000 + ordersData.length + 1)
+  });
 }
 
 const container = document.getElementById("orderHistoryContainer");
@@ -66,17 +74,17 @@ const statusFilter = document.getElementById("statusFilter");
 const sortFilter = document.getElementById("sortFilter");
 
 function renderOrders() {
-  let filtered = [...ordersData];
+  let list = [...ordersData];
 
   if (hawkerFilter.value !== "all") {
-    filtered = filtered.filter(o => o.hawker === hawkerFilter.value);
+    list = list.filter(o => o.hawker === hawkerFilter.value);
   }
 
   if (statusFilter.value !== "all") {
-    filtered = filtered.filter(o => o.status === statusFilter.value);
+    list = list.filter(o => o.status === statusFilter.value);
   }
 
-  filtered.sort((a, b) =>
+  list.sort((a, b) =>
     sortFilter.value === "new"
       ? new Date(b.date) - new Date(a.date)
       : new Date(a.date) - new Date(b.date)
@@ -84,26 +92,28 @@ function renderOrders() {
 
   container.innerHTML = "";
 
-  if (filtered.length === 0) {
+  if (list.length === 0) {
     container.innerHTML = `<p class="empty">No orders found.</p>`;
     return;
   }
 
-  filtered.forEach(order => {
-    const div = document.createElement("div");
-    div.className = "order-card";
-    div.innerHTML = `
+  list.forEach(order => {
+    const card = document.createElement("div");
+    card.className = "order-card";
+    card.innerHTML = `
       <h3>${order.stall}</h3>
       <p><strong>Order ID:</strong> ${order.id}</p>
       <p><strong>Hawker:</strong> ${order.hawker}</p>
-      <div class="items"><strong>Items:</strong> ${order.items.join(", ")}</div>
+      <p><strong>Items:</strong> ${order.items.join(", ")}</p>
       <p><strong>Total:</strong> $${order.total.toFixed(2)}</p>
       <p><strong>Status:</strong>
-        <span class="status ${order.status.toLowerCase()}">${order.status}</span>
+        <span class="status ${order.status.toLowerCase()}">
+          ${order.status}
+        </span>
       </p>
       <p><strong>Date:</strong> ${order.date}</p>
     `;
-    container.appendChild(div);
+    container.appendChild(card);
   });
 }
 
@@ -119,3 +129,4 @@ document.getElementById("clearOrders").onclick = () => {
 };
 
 renderOrders();
+
