@@ -7,14 +7,7 @@
 
 ## 📌 Project Overview
 
-Welcome to our **Front-End Development (FED) Assignment** repository!  
-This project showcases our understanding of **HTML, CSS, and JavaScript**, applying core front-end concepts to build a functional and visually appealing web application.
-
-The goal of this assignment is to:
-- Apply front-end fundamentals
-- Practice clean code structure
-- Work collaboratively using GitHub
-- Build a responsive and user-friendly interface
+Hawker Hub is a web-based application designed to support customers, stall owners, hawker centre operators, and NEA officers through a single integrated digital platform. The system streamlines food ordering, payment, stall management, and hygiene monitoring to improve operational efficiency, food safety, and overall customer experience at hawker centres.
 
 ---
 
@@ -46,12 +39,10 @@ The goal of this assignment is to:
 ```plaintext
 FED-ASG/
 │
-├── index.html        # Main HTML file
-├── css/
-│   └── style.css     # Styling
-├── js/
-│   └── script.js     # JavaScript logic
-├── assets/
-│   ├── images/       # Images & icons
-│   └── fonts/        # Fonts (if any)
-└── README.md         # Project documentation
+├── Main-Page
+├── OrderHistory (By Kyran)
+├── Ordering & Checkout (By Savion)
+├── Feedback (By Dana)
+├── vendor-management (By Zong You)
+├── credits
+├── README.md
