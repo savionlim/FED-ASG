@@ -1,40 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Order History</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="orderhistory.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="orderhistory.css">
 </head>
 
 <body>
 
-  <!-- HEADER -->
-  <header class="navbar">
-    <h1>Order History</h1>
-    <a href="../Main-Page/MainPage.html" class="back-btn">⬅ Back to Main Page</a>
-  </header>
+<header class="navbar">
+  <h1>Order History</h1>
+  <a href="../Main-Page/MainPage.html" class="back-btn">← Back to Main Page</a>
+</header>
 
-  <!-- FILTER -->
-  <section class="filter-section">
-    <label for="hawkerFilter">Filter by Hawker Centre:</label>
+<section class="controls">
+  <label>
+    Filter by Hawker:
     <select id="hawkerFilter">
       <option value="all">All</option>
       <option value="Maxwell Food Centre">Maxwell Food Centre</option>
       <option value="Lau Pa Sat">Lau Pa Sat</option>
       <option value="Chinatown Complex">Chinatown Complex</option>
     </select>
-  </section>
+  </label>
 
-  <!-- ORDERS -->
-  <section id="orderHistoryContainer" class="order-grid">
-    <!-- JS injects orders -->
-  </section>
+  <button id="clearOrders" class="clear-btn">Clear Order History</button>
+</section>
 
-  <!-- JS -->
-  <script src="OrderHistory.js"></script>
+<section id="orderHistoryContainer" class="order-grid"></section>
+
+<!-- Modal -->
+<div id="orderModal" class="modal hidden">
+  <div class="modal-content">
+    <span id="closeModal">&times;</span>
+    <h2>Order Details</h2>
+    <div id="modalBody"></div>
+  </div>
+</div>
+
+<script src="OrderHistory.js"></script>
 </body>
 </html>
+
 
