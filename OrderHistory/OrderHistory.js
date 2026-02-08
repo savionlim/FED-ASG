@@ -1,5 +1,6 @@
 function goBack() {
-  window.location.href = "../MainPage.html";
+  // CORRECT path based on your real folder structure
+  window.location.href = "../Main-Page/MainPage.html";
 }
 
 const ordersData = [
@@ -129,4 +130,3 @@ document.getElementById("clearOrders").onclick = () => {
 };
 
 renderOrders();
-
