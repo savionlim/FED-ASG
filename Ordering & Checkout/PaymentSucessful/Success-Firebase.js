@@ -77,12 +77,6 @@ window.addEventListener('DOMContentLoaded', async function() {
 });
 
 // ===== FIREBASE API FUNCTIONS =====
-
-/**
- * Save order to Firebase Realtime Database using REST API
- * API Method: POST
- * Endpoint: /orders.json
- */
 async function saveOrderToFirebase(orderData) {
     try {
         console.log('📡 Making POST request to Firebase API...');
@@ -117,11 +111,6 @@ async function saveOrderToFirebase(orderData) {
     }
 }
 
-/**
- * Get all orders from Firebase (for admin/testing)
- * API Method: GET
- * Endpoint: /orders.json
- */
 async function getAllOrdersFromFirebase() {
     try {
         console.log('📡 Making GET request to Firebase API...');
@@ -142,10 +131,7 @@ async function getAllOrdersFromFirebase() {
     }
 }
 
-/**
- * Get orders by email from Firebase
- * API Method: GET with query parameters
- */
+
 async function getOrdersByEmail(email) {
     try {
         const url = `${FIREBASE_CONFIG.databaseURL}/orders.json?orderBy="email"&equalTo="${email}"`;
@@ -164,10 +150,7 @@ async function getOrdersByEmail(email) {
     }
 }
 
-/**
- * Update order status in Firebase
- * API Method: PATCH
- */
+
 async function updateOrderStatus(firebaseId, newStatus) {
     try {
         console.log('📡 Making PATCH request to update order status...');
@@ -243,8 +226,6 @@ function clearPaymentData() {
     // Clear the cart after successful payment
     localStorage.removeItem('hawkerCart');
     
-    // Keep orderTotals for a bit longer in case user refreshes
-    // You can clear this manually or set a timeout
     
     console.log('✅ Payment data cleared');
 }

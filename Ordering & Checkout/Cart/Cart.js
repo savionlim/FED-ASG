@@ -116,7 +116,7 @@ function updateOrderSummary() {
     });
     
     const deliveryFee = 5.00;
-    const serviceFee = subtotal * 0.05; // 5% service fee
+    const serviceFee = subtotal * 0.05;
     const total = subtotal + deliveryFee + serviceFee;
     
     document.getElementById('subtotal-amount').textContent = `$${subtotal.toFixed(2)}`;
@@ -154,7 +154,6 @@ function displayEmptyCart() {
         </div>
     `;
     
-    // Hide checkout button
     document.querySelector('.checkout-btn').style.display = 'none';
     
     // Reset summary

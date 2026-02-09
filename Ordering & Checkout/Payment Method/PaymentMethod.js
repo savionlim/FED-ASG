@@ -56,7 +56,6 @@ function selectPaymentMethod(methodId) {
 // Handle confirm button
 function handleConfirm() {
     if (selectedMethod) {
-        // Redirect to specific payment page based on selected method
         switch(selectedMethod) {
             case 'applepay':
                 window.location.href = 'Apple Pay/ApplePay.html';
